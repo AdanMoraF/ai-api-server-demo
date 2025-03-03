@@ -1,16 +1,23 @@
+import logging
 from fastapi import APIRouter, HTTPException, Depends
 from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
-from .schemas import PredictRequest, PredictResponse
-import json
+from .schemas import QuestionRequest, QuestionResponse
+from .services import OllamaLangsmithModelService
 
+# Setup logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 router = APIRouter()
 
-@router.post("/model/predict", response_model=PredictResponse)
-def predict(request: PredictRequest):
-    pass
+ollamaService = OllamaLangsmithModelService()
 
-@router.get("/model")
-def helloworld():
-    return JSONResponse(content=jsonable_encoder({"hola"}))
+@router.post("/question", response_model=QuestionResponse)
+async def predict(request: QuestionRequest):
+    try:
+        answer = ollamaService.ask_question(request.question)
+        return QuestionResponse(**answer)
+    except Exception as e:
+        logger.error(f"Error processing request: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal Server Error")

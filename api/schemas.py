@@ -1,8 +1,9 @@
 from pydantic import BaseModel
 
-class PredictRequest (BaseModel):
-    pass
+class QuestionRequest (BaseModel):
+    question: str
 
 
-class PredictResponse(BaseModel):
-    pass
+class QuestionResponse(BaseModel):
+    answer: str
+    context: list
