@@ -71,7 +71,7 @@ class DataBaseChroma:
 
     def create_or_load_database(self):
         collection_name = "laborAI_db"
-        db_directory = f"./resources/{collection_name}"
+        db_directory = f"./api/resources/{collection_name}"
 
         embedding = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL)
 
