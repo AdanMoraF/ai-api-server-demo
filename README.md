@@ -52,15 +52,20 @@ LaborAI utiliza tecnologías avanzadas de procesamiento del lenguaje natural (NL
 4. **Instalar y Configurar Ollama**
 
     ```bash
+    # En Linux
     curl -fsSL https://ollama.com/install.sh | sh
     ollama serve &
+
+    # Para Mac y Windows descargar desde la página oficial de Ollama: https://ollama.com/download
+
+    # Después de instalar Ollama, hacer pull del modelo LLM.
     ollama pull llama3-chatqa
     ```
 
 5. **Ejecutar la Aplicación FastAPI**
 
     ```bash
-    uvicorn api:app --reload --host 0.0.0.0 --port 8000
+    uvicorn main:app --reload --host 0.0.0.0 --port 8000
     ```
 
 6. **Ejemplo de Request**
@@ -71,4 +76,18 @@ LaborAI utiliza tecnologías avanzadas de procesamiento del lenguaje natural (NL
     --data '{
         "question": "Cual es el concepto de trabajo?"
     }'
+    ```
+
+7. **Ejemplo de Response**
+
+    ```bash
+    {
+        "answer": "Texto con la respuesta",
+        "context": [
+            "texto 1 ...",
+            "texto 2 ...",
+            "texto 3 ...",
+            "texto 4 ..."
+        ]
+    }
     ```
