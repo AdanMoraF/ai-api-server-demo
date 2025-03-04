@@ -72,7 +72,7 @@ Se utiliza el modelo Ollama ajustado con BERT para la generación de pares de pr
     curl --location 'http://0.0.0.0:8000/question' \
     --header 'Content-Type: application/json' \
     --data '{
-        "question": "Cual es el concepto de trabajo?"
+        "question": "Qué debo hacer si Windows Update no funciona?"
     }'
     ```
 
