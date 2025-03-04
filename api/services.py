@@ -26,16 +26,16 @@ PROMPT_TEMPLATE = """
 class DataBaseChroma:
     def __init__(self):
         self.links = [
-            "https://www.argentina.gob.ar/normativa/nacional/ley-20744-25552/actualizacion",
-            "https://www.argentina.gob.ar/normativa/nacional/ley-24013-412/actualizacion",
-            "https://www.argentina.gob.ar/normativa/nacional/ley-24557-27971/actualizacion",
-            "https://www.argentina.gob.ar/normativa/nacional/ley-11544-63368/actualizacion"
+            "https://learn.microsoft.com/es-es/windows/",
+            "https://learn.microsoft.com/es-es/troubleshoot/windows-client/",
+            "https://support.microsoft.com/es-es/windows",
+            "https://learn.microsoft.com/es-es/windows/release-health/",
         ]
         self.titles = [
-            "REGIMEN DE CONTRATO DE TRABAJO LEY N° 20.744",
-            "EMPLEO Ley Nº 24.013",
-            "RIESGOS DEL TRABAJO LEY N° 24.557",
-            "JORNADA DE TRABAJO Ley 11.544"
+            "Documentación de Windows",
+            "Solución de problemas en Windows",
+            "Soporte de Windows",
+            "Estado de versiones y actualizaciones de Windows",
         ]
         self.dataset = self.create_or_load_database()
 
