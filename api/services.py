@@ -16,11 +16,11 @@ import os
 EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 MODEL = "llama3-chatqa"
 PROMPT_TEMPLATE = """
-    Responda en español a la siguiente pregunta:
+    Eres un asistente de soporte técnico especializado en Windows. Responde de manera clara y concisa en español a la siguiente pregunta:
 
     {question}
 
-    , basándose en el siguiente contexto: {context}
+    Basándote en el siguiente contexto: {context}
 """
 
 class DataBaseChroma:
