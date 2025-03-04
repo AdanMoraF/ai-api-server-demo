@@ -1,10 +1,8 @@
-# LaborAI
 
-LaborAI es una aplicación web diseñada para proporcionar respuestas rápidas y precisas a consultas sobre legislación laboral argentina. Utiliza el modelo Ollama ajustado con BERT para la generación de pares de preguntas y respuestas, basándose en datos que comprenden cuatro leyes completas de la legislación laboral argentina.
+Este repositorio reutiliza los contenidos del proyector LaborAI, cuyo contenido original se encuentra en: <https://github.com/karentp/LaborAIChatbot> una aplicación web diseñada para proporcionar respuestas rápidas y precisas a consultas sobre legislación laboral argentina. En este repositorio se hizo un cambio de contexto para que el chatbot funcione como un asistente de soporte IT. La idea es que se utilice como ejemplo de arquitectura de IA en lo que sería un chatbot de un sitio web. 
 
-## Descripción
+Se utiliza el modelo Ollama ajustado con BERT para la generación de pares de preguntas y respuestas.
 
-LaborAI utiliza tecnologías avanzadas de procesamiento del lenguaje natural (NLP) para entender y responder preguntas sobre la legislación laboral argentina. El backend de la aplicación está construido con FastAPI y Uvicorn, mientras que el frontend está desarrollado con Angular y Tailwind CSS.
 
 ## Herramientas Utilizadas
 
@@ -74,7 +72,7 @@ LaborAI utiliza tecnologías avanzadas de procesamiento del lenguaje natural (NL
     curl --location 'http://0.0.0.0:8000/question' \
     --header 'Content-Type: application/json' \
     --data '{
-        "question": "Cual es el concepto de trabajo?"
+        "question": "Qué debo hacer si Windows Update no funciona?"
     }'
     ```
 
